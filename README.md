@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+
         // register hello function to handle all requests
         mux := http.NewServeMux()
         mux.HandleFunc("/", hello)
