@@ -31,10 +31,12 @@ metadata:
   labels:
     app: hello
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: hello
   ports:
-  - port: 80
+  - protocol: TCP
+    port: 80
     targetPort: 8888
-    protocol: TCP
+    nodePort: 30036
+    
